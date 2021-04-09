@@ -10,9 +10,19 @@
   font-size: 16px;
   --fullWhite: #fff;
   --fullBlack: #000;
-  --mainBlue: #63C2D1;
-  --mainBlueStrong: #4EADBE;
-  --mainBlueLight: #83D6E3;
+
+  --grey: #757b8a;
+
+  --mainBlue-4: #ebf7f9;
+  --mainBlue-3: #d8f0f3;
+  --mainBlue-2: #b0e0e8;
+  --mainBlue-1: #89d1dc;
+  --mainBlue: #63c2d1;
+  --mainBlue1: #3bb2c4;
+  --mainBlue2: #2f8e9d;
+  --mainBlue3: #236b76;
+  --mainBlue4: #17474f;
+  --mainBlue5: #0c2427;
 }
 
 body {
@@ -49,7 +59,7 @@ button {
   font-size: 1.15rem;
   border: 1px solid transparent;
   border-radius: 0.3em;
-  background-color: var(--mainBlue);
+  background-color: var(--grey);
   color: var(--fullWhite);
   cursor: pointer;
 }
