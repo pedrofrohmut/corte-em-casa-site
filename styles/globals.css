@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  --fullWhite: #fff;
+  --fullBlack: #000;
+  --mainBlue: #63C2D1;
+  --mainBlueStrong: #4EADBE;
+  --mainBlueLight: #83D6E3;
+}
+
+body {
+  /* Hides the wierd side scroll to nowhere */
+  overflow-y: hidden;
+  min-height: 100vh;
+  background-color: var(--fullWhite);
+  color: var(--fullBlack);
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: var(--fullBlack);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid var(--grey);
+  border-radius: 0.3em;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  background-color: var(--mainBlue);
+  color: var(--fullWhite);
+  cursor: pointer;
+}
+
