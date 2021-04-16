@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 const StyledContainer = styled.div`
   color: var(--grey1);
+  padding-top: 1rem;
 
   h1 {
     padding-left: 1rem;
