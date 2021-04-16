@@ -11,7 +11,15 @@
   --fullWhite: #fff;
   --fullBlack: #000;
 
+  --grey-4: #e3e5e8;
+  --grey-3: #c8cad0;
+  --grey-2: #acb0b9;
+  --grey-1: #9195a1;
   --grey: #757b8a;
+  --grey1: #5e626e;
+  --grey2: #464a53;
+  --grey3: #2f3137;
+  --grey4: #17191c;
 
   --mainBlue-4: #ebf7f9;
   --mainBlue-3: #d8f0f3;
@@ -63,4 +71,3 @@ button {
   color: var(--fullWhite);
   cursor: pointer;
 }
-

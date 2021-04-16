@@ -1,56 +1,33 @@
-import styled from "styled-components"
+import StyledContainer, { Links } from "./home/styles"
 
-export default function App() {
-  return (
-    <Container>
-      <h1>Corte em Casa</h1>
-      <ul>
-        <li>
-          <button>
-            Cortar com cabeleleiro disponivel
-          </button>
-        </li>
-        <br />
-        <li>
-          <button>Listar cabeleiros proximos</button>
-        </li>
-        <br />
-        <li>
-          <button>Buscar cabeleiro por nome</button>
-        </li>
-      </ul>
-      <div className="links">
-        <span>Log in</span> | <span>Cadastrar</span>
+const HomePage = () => (
+  <StyledContainer>
+    <h1>Corte em Casa</h1>
+    <main>
+      <div>
+        <p>
+          Escolha qual o serviço a ser realizado com um cabeleleiro disponivel
+          proximo a você.
+        </p>
+        <button>Cortar com cabeleleiro disponivel</button>
       </div>
-    </Container>
-  )
-}
+      <div>
+        <p>
+          Escolha um cabeleleiro especifico de nossa lista e agende um horário
+        </p>
+        <button>Listar cabeleiros proximos</button>
+      </div>
+      <div>
+        <p>
+          Ja sabe com quem quer cortar? Procure o cabeleleiro desejado por nome
+        </p>
+        <button>Buscar cabeleiro</button>
+      </div>
+    </main>
+    <Links>
+      <span>Log in</span> | <span>Cadastrar</span>
+    </Links>
+  </StyledContainer>
+)
 
-const Container = styled.div`
-  background-color: var(--mainBlue-1);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  h1 {
-    font-size: 2.2rem;
-    margin-top: 12px;
-  }
-
-  button {
-    width: 93vw;
-    background-color: var(--mainBlue2);
-  }
-
-  .links {
-    font-size: 1.1rem;
-    padding: 12px 0;
-    color: var(--mainBlue3);
-
-    span {
-      margin: 0 5px;
-    }
-  }
-`
+export default HomePage
