@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
-import { handleToggleNavigation } from "./functions"
+import { handleToggleNavigation, handleCloseNavigation } from "./functions"
 import StyledContainer, {
   Logo,
   Navigation,
@@ -21,17 +21,17 @@ const Navbar = () => {
       </Logo>
       <Navigation isOpen={isOpen}>
         <ul>
-          <li>
+          <li onClick={() => handleCloseNavigation(setIsOpen)}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          <li>
+          <li onClick={() => handleCloseNavigation(setIsOpen)}>
             <Link href="/about">
               <a>Sobre</a>
             </Link>
           </li>
-          <li>
+          <li onClick={() => handleCloseNavigation(setIsOpen)}>
             <Link href="/contact">
               <a>Contato</a>
             </Link>

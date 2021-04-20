@@ -29,6 +29,19 @@ const StyledContainer = styled.div`
     background-color: var(--mainBlue1);
     color: var(--fullWhite);
   }
+
+  @media (min-width: 481px) {
+    button {
+      max-width: 350px;
+    }
+  }
+
+  @media (min-width: 721px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 `
 
 export const Links = styled.div`

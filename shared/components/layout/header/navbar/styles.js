@@ -6,7 +6,7 @@ const StyledContainer = styled.div`
   background-color: var(--main);
   position: relative;
 
-  @media (min-width: 720px) {
+  @media (min-width: 721px) {
     display: flex;
     flex-direction: row;
   }
@@ -22,7 +22,7 @@ export const Logo = styled.div`
     font-size: 1.3rem;
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 721px) {
     display: inline-block;
     width: 240px;
   }
@@ -51,7 +51,7 @@ export const Navigation = styled.nav`
     color: var(--light);
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 721px) {
     display: flex;
     position: relative;
     align-items: center;
@@ -77,7 +77,7 @@ export const ToggleNavigationButton = styled.div`
   font-size: 2rem;
   padding: 0.3rem 1rem;
 
-  @media (min-width: 720px) {
+  @media (min-width: 721px) {
     display: none;
   }
 `

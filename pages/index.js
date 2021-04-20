@@ -1,3 +1,7 @@
+import Link from "next/link"
+
+import * as HREF from "../shared/constants/href"
+
 import StyledContainer, { Links } from "./home/styles"
 
 const HomePage = () => (
@@ -6,22 +10,29 @@ const HomePage = () => (
     <main>
       <div>
         <p>
-          Escolha qual o serviço a ser realizado com um cabeleleiro disponivel
+          Escolha qual o serviço a ser realizado com um cabeleireiro disponivel
           proximo a você.
         </p>
-        <button>Cortar com cabeleleiro disponivel</button>
+        <Link href={HREF.LISTAR_CORTES}>
+          <button>Escolher corte</button>
+        </Link>
       </div>
       <div>
         <p>
-          Escolha um cabeleleiro especifico de nossa lista e agende um horário
+          Escolha um cabeleireiro especifico de nossa lista e agende um horário
         </p>
-        <button>Listar cabeleiros proximos</button>
+        <Link href={HREF.LISTAR_CABELEIREIROS}>
+          <button>Listar cabeleireiros próximos</button>
+        </Link>
       </div>
       <div>
         <p>
-          Ja sabe com quem quer cortar? Procure o cabeleleiro desejado por nome
+          Ja sabe com quem quer cortar? Procure seu o cabeleireiro desejado pelo
+          nome
         </p>
-        <button>Buscar cabeleiro</button>
+        <Link href={HREF.BUSCAR_CABELEIREIRO}>
+          <button>Buscar cabeleireiro</button>
+        </Link>
       </div>
     </main>
     <Links>
