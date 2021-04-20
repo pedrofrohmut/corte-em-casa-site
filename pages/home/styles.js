@@ -13,8 +13,8 @@ const StyledContainer = styled.div`
     margin-bottom: 2rem;
   }
 
-  main div {
-    margin-bottom: 2.3rem;
+  .content-block {
+    margin-bottom: 2.8rem;
     padding: 0 1rem;
   }
 
@@ -28,11 +28,32 @@ const StyledContainer = styled.div`
     width: 100%;
     background-color: var(--mainBlue1);
     color: var(--fullWhite);
+    opacity: 0.95;
   }
 
   @media (min-width: 481px) {
     button {
-      max-width: 350px;
+      background-color: transparent;
+      color: var(--mainBlue1);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      font-size: 1.4rem;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+
+    span {
+      position: relative;
+    }
+
+    button span::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: var(--mainBlue1);
     }
   }
 

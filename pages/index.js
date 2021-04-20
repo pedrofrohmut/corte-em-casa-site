@@ -8,31 +8,43 @@ const HomePage = () => (
   <StyledContainer>
     <h1>Corte em Casa</h1>
     <main>
-      <div>
+      <div className="content-block">
         <p>
           Escolha qual o serviço a ser realizado com um cabeleireiro disponivel
           proximo a você.
         </p>
-        <Link href={HREF.LISTAR_CORTES}>
-          <button>Escolher corte</button>
-        </Link>
+        <div className="button-container">
+          <Link href={HREF.LISTAR_CORTES}>
+            <button>
+              <span>Escolher corte</span>
+            </button>
+          </Link>
+        </div>
       </div>
-      <div>
+      <div className="content-block">
         <p>
           Escolha um cabeleireiro especifico de nossa lista e agende um horário
         </p>
-        <Link href={HREF.LISTAR_CABELEIREIROS}>
-          <button>Listar cabeleireiros próximos</button>
-        </Link>
+        <div className="button-container">
+          <Link href={HREF.LISTAR_CABELEIREIROS}>
+            <button>
+              <span>Listar cabeleireiros próximos</span>
+            </button>
+          </Link>
+        </div>
       </div>
-      <div>
+      <div className="content-block">
         <p>
           Ja sabe com quem quer cortar? Procure seu o cabeleireiro desejado pelo
           nome
         </p>
-        <Link href={HREF.BUSCAR_CABELEIREIRO}>
-          <button>Buscar cabeleireiro</button>
-        </Link>
+        <div className="button-container">
+          <Link href={HREF.BUSCAR_CABELEIREIRO}>
+            <button>
+              <span>Buscar cabeleireiro</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </main>
     <Links>
