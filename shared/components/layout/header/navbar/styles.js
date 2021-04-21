@@ -29,7 +29,7 @@ export const Logo = styled.div`
 `
 
 export const Navigation = styled.nav`
-  display: ${props => (props.isOpen ? "block" : "none")};
+  display: ${props => (props.isNavigationOpen ? "block" : "none")};
   position: absolute;
   top: 100%;
   width: 100%;

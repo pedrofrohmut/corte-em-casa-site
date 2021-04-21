@@ -2,9 +2,12 @@ import styled from "styled-components"
 
 import Navbar from "./navbar"
 
-const Header = () => (
+const Header = ({ isNavigationOpen, setIsNavigationOpen }) => (
   <StyledContainer>
-    <Navbar />
+    <Navbar
+      isNavigationOpen={isNavigationOpen}
+      setIsNavigationOpen={setIsNavigationOpen}
+    />
   </StyledContainer>
 )
 

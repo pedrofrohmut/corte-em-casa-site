@@ -1,3 +1,5 @@
-export const handleToggleNavigation = (isOpen, setIsOpen) => setIsOpen(!isOpen)
+export const handleToggleNavigation = (isNavigationOpen, setIsNavigationOpen) =>
+  setIsNavigationOpen(!isNavigationOpen)
 
-export const handleCloseNavigation = setIsOpen => setIsOpen(false)
+export const handleCloseNavigation = setIsNavigationOpen =>
+  setIsNavigationOpen(false)
