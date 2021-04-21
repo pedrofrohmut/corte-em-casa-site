@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const StyledContainer = styled.div`
+  background-color: var(--fullWhite);
   color: var(--grey1);
   padding-top: 1rem;
 
@@ -24,36 +25,59 @@ const StyledContainer = styled.div`
     padding: 0.2rem 0.5rem;
   }
 
-  button {
-    width: 100%;
+  a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
     background-color: var(--mainBlue1);
     color: var(--fullWhite);
-    opacity: 0.95;
+    opacity: 0.9;
+    border: 0;
+    border-radius: 0.4rem;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--mainBlue3);
+    }
   }
 
   @media (min-width: 481px) {
-    button {
+    a {
+      display: inline-block;
+      padding: 0;
+      margin-left: 0.5rem;
+      position: relative;
+      text-align: left;
       background-color: transparent;
       color: var(--mainBlue1);
       font-weight: 600;
-      letter-spacing: 0.5px;
       font-size: 1.4rem;
-      padding: 0 0.5rem;
-      text-align: left;
+      outline: none;
+      opacity: 0.7;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        background-color: transparent;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        display: block;
+      }
     }
 
-    span {
-      position: relative;
-    }
-
-    button span::after {
+    a::after {
       content: "";
       position: absolute;
       top: 100%;
       left: 0;
-      height: 2px;
+      height: 3px;
       width: 100%;
       background-color: var(--mainBlue1);
+      display: none;
     }
   }
 
