@@ -22,6 +22,8 @@ module.exports = {
     semi: ["warn", "never"],
     quotes: ["warn", "double"],
     "comma-dangle": ["error", "never"],
-    curly: "off"
+    curly: "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
   }
 }

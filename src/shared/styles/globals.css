@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  --fullWhite: #fff;
+  --fullBlack: #000;
+
+  --grey-4: #e3e5e8;
+  --grey-3: #c8cad0;
+  --grey-2: #acb0b9;
+  --grey-1: #9195a1;
+  --grey: #757b8a;
+  --grey1: #5e626e;
+  --grey2: #464a53;
+  --grey3: #2f3137;
+  --grey4: #17191c;
+
+  --mainBlue-4: #ebf7f9;
+  --mainBlue-3: #d8f0f3;
+  --mainBlue-2: #b0e0e8;
+  --mainBlue-1: #89d1dc;
+  --mainBlue: #63c2d1;
+  --mainBlue1: #3bb2c4;
+  --mainBlue2: #2f8e9d;
+  --mainBlue3: #236b76;
+  --mainBlue4: #17474f;
+  --mainBlue5: #0c2427;
+}
+
+body {
+  /* Hides the wierd side scroll to nowhere */
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--fullWhite);
+  color: var(--fullBlack);
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: var(--fullBlack);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid var(--grey);
+  border-radius: 0.3em;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  background-color: var(--grey);
+  color: var(--fullWhite);
+  cursor: pointer;
+}
+
+.barber-logo {
+  width: 390px;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--mainBlue4);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
