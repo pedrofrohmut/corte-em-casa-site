@@ -5,6 +5,11 @@ const StyledContainer = styled.div`
   padding: 4rem 2rem;
   flex: 1;
 
+  .container {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
   form {
     width: 100%;
     margin-bottom: 5rem;

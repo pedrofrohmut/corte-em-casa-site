@@ -5,11 +5,16 @@ const StyledContainer = styled.div`
   padding: 4rem 2rem;
   flex: 1;
 
+  .container {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
   form {
     width: 100%;
     margin-bottom: 5rem;
   }
-  
+
   label {
     display: inline-block;
     font-size: 1.1rem;
@@ -65,7 +70,6 @@ const StyledContainer = styled.div`
     height: 3px;
     background-color: var(--mainBlue4);
   }
-
 `
 
 export default StyledContainer

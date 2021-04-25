@@ -2,12 +2,9 @@ import styled from "styled-components"
 
 import Navbar from "./navbar"
 
-const Header = ({ isNavigationOpen, setIsNavigationOpen }) => (
+const Header: React.FC = () => (
   <StyledContainer>
-    <Navbar
-      isNavigationOpen={isNavigationOpen}
-      setIsNavigationOpen={setIsNavigationOpen}
-    />
+    <Navbar />
   </StyledContainer>
 )
 

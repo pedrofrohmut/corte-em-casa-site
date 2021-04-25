@@ -1,5 +1,14 @@
-export const handleToggleNavigation = (isNavigationOpen, setIsNavigationOpen) =>
-  setIsNavigationOpen(!isNavigationOpen)
+import { Dispatch, SetStateAction } from "react"
 
-export const handleCloseNavigation = setIsNavigationOpen =>
+export const handleToggleNavigation = (
+  isNavigationOpen: boolean,
+  setIsNavigationOpen: Dispatch<SetStateAction<boolean>>
+): void => { 
+  setIsNavigationOpen(!isNavigationOpen)
+}
+
+export const handleCloseNavigation = (
+  setIsNavigationOpen: Dispatch<SetStateAction<boolean>>
+): void => { 
   setIsNavigationOpen(false)
+}

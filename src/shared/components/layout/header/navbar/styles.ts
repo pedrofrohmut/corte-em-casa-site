@@ -7,6 +7,10 @@ const StyledContainer = styled.div`
   position: relative;
   opacity: 0.9;
 
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
   @media (min-width: 721px) {
     display: flex;
     flex-direction: row;
@@ -14,7 +18,7 @@ const StyledContainer = styled.div`
 `
 
 export const Logo = styled.div`
-  display: none;
+  display: block;
 
   a {
     display: inline-block;
@@ -29,7 +33,11 @@ export const Logo = styled.div`
   }
 `
 
-export const Navigation = styled.nav`
+interface NavigationProps {
+  isNavigationOpen: boolean
+}
+
+export const Navigation = styled.nav<NavigationProps>`
   display: ${props => (props.isNavigationOpen ? "block" : "none")};
   position: absolute;
   top: 100%;

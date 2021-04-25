@@ -1,26 +1,21 @@
-import { useState } from "react"
+import {useContext} from "react"
+
+import {AppContext} from "../../context"
 
 import Header from "./header"
 import Footer from "./footer"
 
 import StyledContainer, { Content } from "./styles"
 
-import { handleCloseNavigation } from "./header/navbar/functions"
-
-const Layout = ({ children }) => {
-  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+const Layout: React.FC = ({ children }) => { 
+  const { state, dispatch } = useContext(AppContext)
   return (
-    <StyledContainer>
-      <Header
-        isNavigationOpen={isNavigationOpen}
-        setIsNavigationOpen={setIsNavigationOpen}
-      />
-      <Content onClick={() => handleCloseNavigation(setIsNavigationOpen)}>
-        {children}
-      </Content>
-      <Footer />
-    </StyledContainer>
-  )
+  <StyledContainer>
+    <Header />
+    <Content onClick={() => dispatch({ type: "CLOSE_NAVIGATION" })}>{children}</Content>
+    <Footer />
+  </StyledContainer>
+)
 }
 
 export default Layout
