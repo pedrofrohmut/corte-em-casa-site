@@ -1,25 +1,23 @@
-import { useEffect } from "react"
+import { ReactElement, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSpinner } from "@fortawesome/free-solid-svg-icons"
 
-import { AUTH_TOKEN } from "../shared/constants/local-storage"
-import { SIGNIN_HREF } from "../shared/constants/href"
+import LocalStorageKeys from "../shared/constants/local-storage-keys"
+import Href from "../shared/constants/href"
 
 import StyledContainer from "./preload/styles"
 
-// TODO: tell with text "Redirecting to sign in...." or other option
-
-const PreloadPage: React.FC = () => {
+const PreloadPage = (): ReactElement => {
   const router = useRouter()
 
   // Executes only in the client-side
   useEffect(() => {
-    const authenticationToken = localStorage.getItem(AUTH_TOKEN)
+    const authenticationToken = localStorage.getItem(LocalStorageKeys.AUTH_TOKEN)
     if (!authenticationToken) {
       setTimeout(() => {
-        router.replace(SIGNIN_HREF)
-      }, 2500)
+        router.replace(Href.SIGNIN_HREF)
+      }, 1500)
     }
   }, [])
 

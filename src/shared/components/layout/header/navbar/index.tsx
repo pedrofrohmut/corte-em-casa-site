@@ -1,12 +1,10 @@
-import { useContext } from "react"
+import { ReactElement, useContext } from "react"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
-import {
-  CLOSE_NAVIGATION,
-  TOOGLE_NAVIGATION
-} from "../../../../constants/action-types"
+import ActionTypes from "../../../../constants/action-types"
+
 import { AppContext } from "../../../../context"
 
 import StyledContainer, {
@@ -15,7 +13,7 @@ import StyledContainer, {
   ToggleNavigationButton
 } from "./styles"
 
-const Navbar: React.FC = () => {
+const Navbar = (): ReactElement => {
   const { state, dispatch } = useContext(AppContext)
   return (
     <StyledContainer>
@@ -26,17 +24,17 @@ const Navbar: React.FC = () => {
       </Logo>
       <Navigation isNavigationOpen={state.navigation.isOpen}>
         <ul>
-          <li onClick={() => dispatch({ type: CLOSE_NAVIGATION })}>
+          <li onClick={() => dispatch({ type: ActionTypes.CLOSE_NAVIGATION })}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          <li onClick={() => dispatch({ type: CLOSE_NAVIGATION })}>
+          <li onClick={() => dispatch({ type: ActionTypes.CLOSE_NAVIGATION })}>
             <Link href="/signin">
               <a>Sign In</a>
             </Link>
           </li>
-          <li onClick={() => dispatch({ type: CLOSE_NAVIGATION })}>
+          <li onClick={() => dispatch({ type: ActionTypes.CLOSE_NAVIGATION })}>
             <Link href="/signup">
               <a>Sign Up</a>
             </Link>
@@ -44,11 +42,7 @@ const Navbar: React.FC = () => {
         </ul>
       </Navigation>
       <ToggleNavigationButton
-        onClick={() => {
-          dispatch({
-            type: TOOGLE_NAVIGATION
-          })
-        }}
+        onClick={() => dispatch({ type: ActionTypes.TOOGLE_NAVIGATION })}
       >
         <FontAwesomeIcon icon={faBars} />
       </ToggleNavigationButton>

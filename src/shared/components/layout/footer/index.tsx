@@ -1,6 +1,7 @@
+import { ReactElement } from "react"
 import styled from "styled-components"
 
-const Footer = () => (
+const Footer = (): ReactElement => (
   <StyledContainer>Copyright &copy; Pedro Frohmut 2021</StyledContainer>
 )
 

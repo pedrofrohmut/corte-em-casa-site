@@ -1,6 +1,6 @@
-import { createContext, useReducer } from "react"
+import { createContext, ReactElement, ReactNode, useReducer } from "react"
 
-import { CLOSE_NAVIGATION, TOOGLE_NAVIGATION } from "./constants/action-types"
+import ActionTypes from "./constants/action-types"
 
 type State = {
   navigation: {
@@ -10,8 +10,6 @@ type State = {
 
 type Action = { type: "CLOSE_NAVIGATION" } | { type: "TOOGLE_NAVIGATION" }
 
-type Reducer = (state: State, action: Action) => State
-
 type Dispatch = (action: Action) => void
 
 type AppContextType = {
@@ -19,11 +17,11 @@ type AppContextType = {
   dispatch: Dispatch
 }
 
-const reducer: Reducer = (state: State, action: Action): State => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case CLOSE_NAVIGATION:
+    case ActionTypes.CLOSE_NAVIGATION:
       return { ...state, navigation: { isOpen: false } }
-    case TOOGLE_NAVIGATION:
+    case ActionTypes.TOOGLE_NAVIGATION:
       return { ...state, navigation: { isOpen: !state.navigation.isOpen } }
     default:
       return state
@@ -36,21 +34,20 @@ const initialState: State = {
   }
 }
 
-// eslint-disable-next-line
-const initialDispatch = () => {}
+const initialDispatch = () => undefined
 
 export const AppContext = createContext<AppContextType>({
   state: initialState,
   dispatch: initialDispatch
 })
 
-const AppContextProvider: React.FC = ({ children }) => {
+type AppContextProviderProps = {
+  children: ReactNode
+}
+
+const AppContextProvider = ({ children }: AppContextProviderProps): ReactElement => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  return (
-    <AppContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AppContext.Provider>
-  )
+  return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>
 }
 
 export default AppContextProvider

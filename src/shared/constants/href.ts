@@ -1,3 +1,6 @@
-export const SIGNIN_HREF = "/signin"
+enum Href {
+  SIGNIN_HREF = "/signin",
+  SIGNUP_HREF = "/signup"
+}
 
-export const SIGNUP_HREF = "/signup"
+export default Href

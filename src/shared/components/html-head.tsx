@@ -1,6 +1,8 @@
+import { ReactElement } from "react"
+
 import Head from "next/head"
 
-const HtmlHead = () => (
+const HtmlHead = (): ReactElement => (
   <Head>
     <title>Corte em Casa</title>
     <meta charSet="utf-8" />
