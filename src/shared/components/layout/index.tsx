@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode, useContext } from "react"
 
-import { AppContext } from "../../context"
+import AppContext from "../../context"
 
 import Header from "./header"
 import Footer from "./footer"

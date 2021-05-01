@@ -17,14 +17,14 @@ const PreloadPage = (): ReactElement => {
     if (!authenticationToken) {
       setTimeout(() => {
         router.replace(Href.SIGNIN_HREF)
-      }, 1500)
+      }, 1900)
     }
   }, [])
 
   return (
     <StyledContainer>
       <img src="/images/barber.svg" alt="Logo" className="barber-logo" />
-      <p>Checking Authentication...</p>
+      <p>Checando autenticação...</p>
       <FontAwesomeIcon icon={faSpinner} spin size="3x" />
     </StyledContainer>
   )

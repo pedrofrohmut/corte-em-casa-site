@@ -8,9 +8,9 @@ const SignInPage = (): ReactElement => (
     <div className="container">
       <img src="/images/barber.svg" alt="Logo" className="barber-logo" />
       <form>
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="email">Endereço de e-mail</label>
         <input type="email" />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Senha</label>
         <input type="password" />
         <input type="submit" value="Entrar" />
       </form>

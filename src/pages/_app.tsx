@@ -3,7 +3,7 @@ import { ReactElement } from "react"
 
 import HtmlHead from "../shared/components/html-head"
 import Layout from "../shared/components/layout"
-import AppContextProvider from "../shared/context"
+import AppContextProvider from "../shared/context/provider"
 
 import "../shared/styles/globals.css"
 

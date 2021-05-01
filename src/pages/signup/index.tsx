@@ -8,13 +8,13 @@ const SignUpPage = (): ReactElement => (
     <div className="container">
       <img src="/images/barber.svg" alt="Logo" className="barber-logo" />
       <form>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Nome completo</label>
         <input type="text" />
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="email">Endereço de e-mail</label>
         <input type="email" />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Senha</label>
         <input type="password" />
-        <label htmlFor="confirmPassword">Confirm Password</label>
+        <label htmlFor="confirmPassword">Repetir senha</label>
         <input type="password" />
         <input type="submit" value="Cadastrar" />
       </form>

@@ -5,7 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 import ActionTypes from "../../../../constants/action-types"
 
-import { AppContext } from "../../../../context"
+import AppContext from "../../../../context"
 
 import StyledContainer, {
   Logo,
@@ -31,12 +31,12 @@ const Navbar = (): ReactElement => {
           </li>
           <li onClick={() => dispatch({ type: ActionTypes.CLOSE_NAVIGATION })}>
             <Link href="/signin">
-              <a>Sign In</a>
+              <a>Entrar</a>
             </Link>
           </li>
           <li onClick={() => dispatch({ type: ActionTypes.CLOSE_NAVIGATION })}>
             <Link href="/signup">
-              <a>Sign Up</a>
+              <a>Cadastrar</a>
             </Link>
           </li>
         </ul>
